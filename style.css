@@ -1,0 +1,8 @@
+.book-card{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    gap: 8px;
+    padding: 4px;
+    align-self: center;
+}

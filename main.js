@@ -30,6 +30,16 @@ function renderLibrary(){
         authorSpan.appendChild(authorNode);
         div.appendChild(authorSpan);
 
+        const deleteButton = document.createElement('button');
+        const deleteNode = document.createTextNode('Rimuovi il libro');
+        deleteButton.addEventListener('click', () => {
+            DBService.deleteBook(book.id).then(() =>{
+                library.deleteBook(i);
+            })
+        });
+        deleteButton.appendChild(deleteNode);
+        div.appendChild(deleteButton);
+
         booksContainer.appendChild(div);
         
         }
