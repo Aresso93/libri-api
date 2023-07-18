@@ -20,6 +20,12 @@ function renderLibrary(){
         const div = document.createElement('div');
         div.classList.add('book-card');
 
+        const coverImage = document.createElement('img');
+        coverImage.src = book.cover;
+        coverImage.alt = book.title;
+        coverImage.classList.add('cover-img');
+        div.appendChild(coverImage);
+
         const titleStrong = document.createElement('strong');
         const titleNode = document.createTextNode(book.title);
         titleStrong.appendChild(titleNode);

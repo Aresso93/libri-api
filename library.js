@@ -16,6 +16,7 @@ class Library{
 
     deleteBook(index){
         this.bookArray.splice(index, 1);
+        renderLibrary()
     }
 
 
